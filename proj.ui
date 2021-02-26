@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1160</width>
+    <height>656</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Организатор тегов</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,5,5" columnstretch="0,5">
+      <item row="0" column="1" rowspan="4">
+       <widget class="QTableWidget" name="table">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="maximumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="tag_editor">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Изменить теги в выделенных строках</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLineEdit" name="line_with_tags"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="btn_save_tags">
+             <property name="text">
+              <string>Сохранить</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QComboBox" name="add_from_existing">
+             <property name="currentText">
+              <string>Добавить из существующих...</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Добавить из существующих...</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="search_tab">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>180</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Быстрый поиск</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_3" columnstretch="0,0">
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="checkbox_search_any">
+             <property name="text">
+              <string>Искать любые вхождения</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="btns1">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Поиск</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="excluding_checkbox">
+             <property name="text">
+              <string>Исключающий поиск</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLineEdit" name="keysearch">
+             <property name="minimumSize">
+              <size>
+               <width>145</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="exact_checkbox">
+             <property name="text">
+              <string>Точное совпадение</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1160</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file_menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="new_file"/>
+    <addaction name="open_file"/>
+    <addaction name="close_file"/>
+    <addaction name="separator"/>
+    <addaction name="update_file"/>
+    <addaction name="delete_file_action"/>
+   </widget>
+   <widget class="QMenu" name="edit_menu">
+    <property name="title">
+     <string>Редактировать</string>
+    </property>
+    <addaction name="add_tag_action"/>
+    <addaction name="edit_tag_action"/>
+    <addaction name="delete_tag_action"/>
+    <addaction name="separator"/>
+    <addaction name="clear_from_tags_action"/>
+    <addaction name="delete_all_tags_action"/>
+   </widget>
+   <widget class="QMenu" name="view_menu">
+    <property name="title">
+     <string>Вид</string>
+    </property>
+    <addaction name="show_side_panel_action"/>
+   </widget>
+   <widget class="QMenu" name="help_menu">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="about"/>
+   </widget>
+   <addaction name="file_menu"/>
+   <addaction name="edit_menu"/>
+   <addaction name="view_menu"/>
+   <addaction name="help_menu"/>
+  </widget>
+  <action name="new_file">
+   <property name="text">
+    <string>Создать...</string>
+   </property>
+  </action>
+  <action name="open_file">
+   <property name="text">
+    <string>Открыть...</string>
+   </property>
+  </action>
+  <action name="delete_file_action">
+   <property name="text">
+    <string>Удалить каталог</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Фильтр</string>
+   </property>
+  </action>
+  <action name="update_file">
+   <property name="text">
+    <string>Обновить каталог</string>
+   </property>
+  </action>
+  <action name="clear_from_tags">
+   <property name="text">
+    <string>Очистить теги</string>
+   </property>
+  </action>
+  <action name="save_file">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>Сохранить как...</string>
+   </property>
+  </action>
+  <action name="add_tag_action">
+   <property name="text">
+    <string>Добавить тег...</string>
+   </property>
+  </action>
+  <action name="edit_tag_action">
+   <property name="text">
+    <string>Изменить тег...</string>
+   </property>
+  </action>
+  <action name="show_side_panel_action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Боковая панель</string>
+   </property>
+  </action>
+  <action name="special_keys_help">
+   <property name="text">
+    <string>Специальный поиск</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Разрешить редактирование</string>
+   </property>
+  </action>
+  <action name="close_file">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+  </action>
+  <action name="clear_from_tags_action">
+   <property name="text">
+    <string>Очистить изображения от тегов</string>
+   </property>
+  </action>
+  <action name="delete_tag_action">
+   <property name="text">
+    <string>Удалить тег...</string>
+   </property>
+  </action>
+  <action name="delete_all_tags_action">
+   <property name="text">
+    <string>Удалить все теги</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
